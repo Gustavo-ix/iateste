@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo 2D Sobrevivência</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Interface do jogo -->
+        <div id="hud">
+            <div id="health-bar-container" class="hidden">
+                <div id="health-bar"></div>
+                <span id="health-text">100/100</span>
+            </div>
+            <div id="game-time">00:00</div>
+            <div id="pause-menu" class="hidden">
+                <h2>JOGO PAUSADO</h2>
+                <p>ESC - Continuar</p>
+            </div>
+            <div id="game-over" class="hidden">
+                <h2>GAME OVER</h2>
+                <p>Clique para reiniciar</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menus laterais -->
+    <div id="inventory-panel" class="side-panel hidden">
+        <h2>INVENTÁRIO</h2>
+        <div id="inventory-grid"></div>
+        <div id="item-tooltip" class="hidden"></div>
+    </div>
+
+    <div id="craft-panel" class="side-panel hidden">
+        <h2>CRAFT</h2>
+        <div class="craft-recipe" data-recipe="lenhador">
+            <span>Lenhador</span>
+            <span>3🌲 + 2🌿</span>
+        </div>
+        <div class="craft-recipe" data-recipe="mineiro">
+            <span>Mineiro</span>
+            <span>2🌲 + 3🪨</span>
+        </div>
+        <div class="craft-recipe" data-recipe="pocao">
+            <span>Poção</span>
+            <span>3🍎</span>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
